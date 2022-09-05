@@ -127,6 +127,10 @@ Zeichnen wir drei Ellipsen mit unterschiedlichen Grautönen. Beachtet auch hier,
 `ellipse(350, 90, 200, 200);`<br/>
 
 ### Uebung 
+Tangram ist ein altes chinesiches Legespiel. Das Spiel besteht aus sieben Grundformen, aus denen eine unendliche Anzahl von Legefiguren konstruiert werden können. Die sieben Steine und Beispiele von Legeformen:
+[[images/00_tangram-shapes.jpg]]
+[[images/06_tangram-p6.jpg]]
+
 Versucht einmal, mit den untenstehenden Befehlen eine Tangram Komposition zu zeichnen, so dass man die einzelnen Grundformen sieht. 
 https://www.pinterest.de/pin/40039884164602343/
 
@@ -157,3 +161,7 @@ Analog zu `fill(0)` funktionieren auch `background(0)` oder `stroke(0)`.
 * `fill(0)` definiert die Füllung einer Form
 * `background(0)` definiert die Farbe des ganzen Hintergrunds und zeichnet den Hintergrund
 * `stroke(0)` definiert die Farbe einer Konturlinie
+
+Videos zur Repetition
+* Formen: https://tinyurl.com/yxvzdm89
+* Farben: https://tinyurl.com/yxk34t94

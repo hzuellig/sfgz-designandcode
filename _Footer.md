@@ -1,0 +1,2 @@
+Eine Einführung in Creative Coding mit P5.js, Hanna Züllig 2022, <br />Lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.<br/>
+:heartpulse: Danke an die Väter und Mütter von P5.js, John Maeda, Ben Fry, Casey Reas, Daniel Shiffman, Lauren McCarthy und vielen mehr. :heartpulse: <br/>
