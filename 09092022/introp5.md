@@ -60,8 +60,8 @@ Ab jetzt kannst du sie in jedem index.html so einbinden:
 
 ***
 ## Koordinatensystem
-Wie bei CSS ist auch bei p5.js der Nullpunkt des Koordinatensystems links oben.Die Massangaben sind in Pixel.
-[[images/Koordinatensystem.jpg]]
+Wie bei CSS ist auch bei p5.js der Nullpunkt des Koordinatensystems links oben. Die Massangaben sind in Pixel.<br/>
+<img src="../images/Koordinatensystem.jpg" ><br/>
 
 ***
 ## Farben und Formen
@@ -78,19 +78,16 @@ Um eine Linie zwischen den Koordinaten (0, 0) und (320, 240) zu zeichnen, versuc
 
 `line(0, 0, 320, 240);`<br/>
 
-Zeichnet euch das Koordinatensystem auf und überlegt, wo die Koordinaten der Linie liegen. 
-[[images/skizze_koordinaten.gif]]<br/><br/>
-
 ### Uebung 
 > Versucht ein Kreuz auf den Bildschirm zu zeichnen, indem ihr zwei Linien zeichnet, die sich kreuzen. 
-
+Zeichnet euch das Koordinatensystem auf und überlegt, wo die Koordinaten der Linie liegen. <br/>
 
 **Alle Zeichenbefehle gehören übrigens in die `draw` Funktion.**
 
 ### Reihenfolge der Befehle
 
 Schreibt ihr zuerst den Befehl für ein Rechteck und dann einen Kreis, sieht es so aus. <br/>
-[[images/Reihenfolge.png \| height=300px]] <br/>
+<img src="../images/Reihenfolge.png" width=400/><br/>
 Wechselt einmal die Reihenfolge der Zeichnungsbefehle. <br/>
 Was passiert und was könnt ihr daraus schliessen?<br/>
 `rect(10,190,380,10);` <br/>
@@ -127,9 +124,9 @@ Zeichnen wir drei Ellipsen mit unterschiedlichen Grautönen. Beachtet auch hier,
 `ellipse(350, 90, 200, 200);`<br/>
 
 ### Uebung 
-Tangram ist ein altes chinesiches Legespiel. Das Spiel besteht aus sieben Grundformen, aus denen eine unendliche Anzahl von Legefiguren konstruiert werden können. Die sieben Steine und Beispiele von Legeformen:
-[[images/00_tangram-shapes.jpg]]
-[[images/06_tangram-p6.jpg]]
+Tangram ist ein altes chinesiches Legespiel. Das Spiel besteht aus sieben Grundformen, aus denen eine unendliche Anzahl von Legefiguren konstruiert werden können. Die sieben Steine und Beispiele von Legeformen:<br/>
+<img src="../images/00_tangram-shapes.jpg" width=400 /><br/>
+<img src="../images/06_tangram-p6.jpg" width=400 /><br/>
 
 Versucht einmal, mit den untenstehenden Befehlen eine Tangram Komposition zu zeichnen, so dass man die einzelnen Grundformen sieht. 
 https://www.pinterest.de/pin/40039884164602343/

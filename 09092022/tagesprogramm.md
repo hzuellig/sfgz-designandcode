@@ -3,20 +3,21 @@
 * Einführung in das Modulthema und -programm, <a href="https://docs.google.com/presentation/d/1CvH7lUmU2S5X55H3V1a02b8hXcXI4cbmQ1nF_xQf3p8">Intro Slides</a>
 * Einführung in p5.js (Einbettung, Koordinaten, Farben, Formen), <a href="https://github.com/hzuellig/sfgz-designandcode/blob/main/09092022/introp5.md">Link Tutorial</a>
 * Vorgegebene und selber definierte Variablen in p5.js, <a href="https://github.com/hzuellig/sfgz-designandcode/blob/main/09092022/variablen.md">Link Tutorial</a>
+* Die Funktion `map` in p5.js, <a href="https://github.com/hzuellig/sfgz-designandcode/blob/main/09092022/mapping.md">Link Tutorial</a>
+* Die Funktion `lerpColor` in p5.js, <a href="https://p5js.org/reference/#/p5/lerpColor">Link Tutorial</a>
 
 # Aufgaben auf 16.9.
-Repetition der Konzepte, je nach individueller Sicherheit die Videos schauen. 
+Repetition der Konzepte, je nach individueller Sicherheit die Videos schauen. Investiert insgesamt etwa 4 Stunden in Repetition und die Übung.
 * Formen: https://tinyurl.com/yxvzdm89
 * Farben: https://tinyurl.com/yxk34t94
 * Vorgegebene Variablen: https://tinyurl.com/y3m3gokd
 * Eigene Variablen: https://tinyurl.com/y2xnkyqt
+* Die Funktion map: https://tinyurl.com/mschfrpj 
 
-Entwerft eine freie rhythmische Komposition, indem ihr eine Variable benutzt und in Etappen verändert und damit Abfolgen einer Farbe/Form generiert. Inspiration findet ihr in den Abbildungen unten. Wenn ihr möchtet, könnt ihr die Fibonacci Zahlenreihe benutzen um Rhythmen zu generieren. 
+Kreiert einen persönlichen 'Stift', der sich je nach Position in der x und y Achse anders verhaltet. https://uneventfulodyssey.netlify.app/assets/js/p5/sketch-dot/dot.html 
 
-[[images/Rhythmus_Itten.jpg]]
-[[images/Rhythmus2.jpg]]
-[[images/Rhythmus3.jpg]]
-[[images/Rhythmus4.jpg]]
+Schreibt euch drei 'Attribute' auf, die euren Code-Stift ausmachen könnten? Worauf könnte er noch reagieren, in Bezug auf welche Daten oder Umstände sich wie verändern? (Zeit, Tempo, usw.)
+
 
 
 # Ressourcen

@@ -13,12 +13,12 @@ Winter 2022, SFGZ, Studiengang HF Interaction Design
 24. Sept. 2022 ganztags
 30. Sept. 2022 halbtags
 07. Okt. 2022 halbtags
-08. Okt. 2022 halbtags
+08. Okt. 2022 halbtags (Schlusspräsentation)
 
 ## Kommunikation
 auf Slack: https://logrinto.slack.com/archives/C0414RABL1J
 
-## Grobplan
+
 
 
 

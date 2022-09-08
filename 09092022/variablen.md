@@ -1,7 +1,7 @@
-# Variablen in JavaScript
+# Variablen im Design und in Code
 
-[[https://raw.githubusercontent.com/hzuellig/WBUZH/main/Parametrisierung.png \| width=400px]] <br/>
-Ein grosser Reiz von Creative Coding besteht darin, dass Formen parametrisiert werden können. Was heisst das?<br/>
+<img src="https://raw.githubusercontent.com/hzuellig/WBUZH/main/Parametrisierung.png" width=300 /> <br/>
+Ein grosser Reiz von Creative Coding besteht darin, dass Formen parametrisiert werden können. Was heisst das? 
 Visuelle Formen haben eine Reihe von Eigenschaften: Strichdicke, Transparenz, Position, Farbwerte, etc. In Creative Coding können diese Aspekte über Variablen abgebildet und variiert werden. 
 ## Variablen
 Was ist eine Variable? Eine Variable ist die Verbindung eines Namens mit einem Wert. Variablen können innerhalb eines einzigen Programms mehrfach verwendet werden. Ihr Wert kann sich während der Ausführung des Programms ändern (oder aber auch konstant bleiben).
@@ -63,7 +63,7 @@ Beachte, dass die Zeichenbefehle immer dieselben sind. Was sich ändert, ist der
 Macht eine Kopie dieses Beispiels. Erstellt eine zweite Variable `durchmesser` und verändert sie vor jedem Zeichenschritt. Benutzt die Variable durchmesser statt des fixen Werts 90.<br/>
 Baue ein eigenes Beispiel mit Variablen, Parametrisierung und Wiederholung von Formen.<br/><br/>
 Zur Inspiration ein paar Resultate aus dem Unterricht, die auf der Basis dieses Beispiels entstanden sind:<br/>
-[[images/variablen.png \| width=800px]] <br/>
+<img src="../images/variablen.png" width=600 /> <br/>
 
 ***
 
