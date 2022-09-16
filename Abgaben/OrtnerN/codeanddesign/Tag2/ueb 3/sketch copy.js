@@ -17,11 +17,12 @@ let lg_hfiad21 = new Array(); //deklarierung
 
   let keyN = 0;
 
+  let n=3;
+
 let myFont;
 function preload() {
   myFont = loadFont('CamelSans-Bold.otf');
 
-  
 }
 
 
@@ -38,9 +39,13 @@ function draw() {
   text(lg_hfiad21[keyN], mouseX, mouseY);
   
 }
+
 function mouseClicked(event) {
   keyN=keyN+1;
-  console.log(keyN);
+
+  if(keyN > lg_hfiad21.length - 1) {
+    keyN=0;
+  }
   // Kurzschreibweise n++
 }
 
