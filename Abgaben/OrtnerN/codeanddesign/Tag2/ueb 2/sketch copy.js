@@ -15,7 +15,7 @@ let lg_hfiad21 = new Array(); //deklarierung
   lg_hfiad21[11] = "Melissa";
   lg_hfiad21[12] = "Alexandra";
 
-  let key = 0;
+  let keyN = 0;
 
 let myFont;
 function preload() {
@@ -35,11 +35,12 @@ function draw() {
   fill(40, 102, 50);
   textFont(myFont);
   textSize(40)
-  text(lg_hfiad21[key], mouseX, mouseY);
+  text(lg_hfiad21[keyN], mouseX, mouseY);
   
 }
 function mouseClicked(event) {
-  key=key+1;
+  keyN=keyN+1;
+  console.log(keyN);
   // Kurzschreibweise n++
 }
 
