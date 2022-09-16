@@ -21,25 +21,27 @@ lg_hfiad21[11] = "Melissa";
 lg_hfiad21[12] = "Alexandra";
 
 let key = 0;
+let random = (100);
 
 function preload() {
     fontRegular = loadFont('../../libraries/AntiqueOliveStd-Roman.otf');
-
-
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(250, 220, 200)
-
-
+    background(250, 220, 200);
 }
 
 function draw() {
+    let x = map(mouseX, length, width, 0, 255)
+    let y = map(mouseY, length, width, 0, 255)
+    let randomRed = Math.floor(Math.random() * 255),
+    randomGreen = Math.floor(Math.random() * 255),
+    randomBlue = Math.floor(Math.random() * 255);
     text(lg_hfiad21[key], mouseX, mouseY);
-    textSize(32);
+    textSize(random);
     textFont(fontRegular);
-    fill(33, 220, 80);
+    fill(randomRed, randomGreen, randomBlue);
     // textSize(45);
 
     // text(name, mouseX, mouseY);
