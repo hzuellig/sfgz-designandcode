@@ -17,7 +17,7 @@ Aber es gibt in p5js eine Funktion, die das für uns erledigt. :-)
 ## Die Funktion map()
 Video: https://www.youtube.com/watch?v=nicMAoW6u1g&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA <br/><br/>
 
-`map(value, start1, stop1, start2, stop2);`<br/>
+`let newvalue=map(oldvalue, start1, stop1, start2, stop2);`<br/>
 Lest einmal in Gruppen die Beschreibung dieser Funktion nach.<br/>
 https://p5js.org/reference/#/p5/map<br/>
 Versucht gemeinsam herauszufinden, was die 5 Parameter bedeuten. 
