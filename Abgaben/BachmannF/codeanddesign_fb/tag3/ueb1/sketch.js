@@ -1,6 +1,6 @@
 let lg_hfiad21 = new Array(); //deklarierung
 lg_hfiad21[0] = "Flavia";
-lg_hfiad21[1] = "Cat";
+lg_hfiad21[1] = "Liza";
 lg_hfiad21[2] = "Mirjam";
 lg_hfiad21[3] = "Sario";
 lg_hfiad21[4] = "Cédric";
@@ -14,28 +14,43 @@ lg_hfiad21[11] = "Melissa";
 lg_hfiad21[12] = "Alexandra";
 
 
+function preload() {
+  fontRegular = loadFont('../../libraries/Krisha-Regular.otf');
+}
+
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);//mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
-
+  createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
+  noLoop();
 }
 
 function draw() {
-  line(20, 20, 20, 180);
-  line(30, 20, 30, 180);
-  line(40, 20, 40, 180); 
-  line(50, 20, 50, 180);
-  line(60, 20, 60, 180);
-  line(70, 20, 70, 180);
-  line(80, 20, 80, 180);
-  line(90, 20, 90, 180);
-  line(100, 20, 100, 180);
-  line(110, 20, 110, 180);
-  line(120, 20, 120, 180);
-  line(130, 20, 130, 180);
-  line(140, 20, 140, 180);
+//  textSize(1);
+  textFont(fontRegular);
 
+  for (let i = 50; i < windowWidth; i += 10) {
+    line(i, 0, -500, 1000);
+    strokeWeight(1);
+    stroke(20,i,20);
+  }
+
+  for (let n = 0; n < lg_hfiad21.length; n=n+1) {
+    //   console.log(lg_hfiad21[n]);
+    strokeWeight(1);
+    stroke(n*20,n*1,n*40);
+    textSize(n*50+50);
+    noFill();
+    text(lg_hfiad21[n], n*5+50, n*50+50)
+    }
+  
 }
+
+
+
+
+
+
+
 
 function keyReleased() {
   if (key == 's' || key == 'S') {
@@ -44,3 +59,10 @@ function keyReleased() {
     saveCanvas(now, 'png');
   }
 }
+
+
+
+
+
+
+
