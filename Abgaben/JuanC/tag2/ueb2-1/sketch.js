@@ -32,6 +32,8 @@ let counter = 0;
 
 var drop = 0;
 
+var rand = 2;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);//mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen.
 
@@ -42,7 +44,7 @@ function draw() {
     //text(brush[counter], 10, 10);
     background(112,1);
     let mausx = map(mouseX,0, windowWidth, 0, 255)
-    fill(234,1,2,drop);
+    fill(234,1,rand,drop);
     //stroke(1);
     textSize(mausx + 100);
     textFont('Helvetica Neue');
@@ -60,6 +62,7 @@ function keyReleased() {
     if (key == 'd' || key == 'D') {
         if (drop == 0) {
             drop = 10;
+            rand = random(2,234);
         } else {
             drop = 0;
         }
