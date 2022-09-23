@@ -213,9 +213,10 @@ Versuche mal, die Idee der Spur in die Visualisierung einzubringen – mit dem, 
 ## Browser History
 
 Aufgabe: 
-Lest eure Browser History ein und gebt mal alle Seitentitel aus. 
-Auf kommenden Samstag, 3 Varianten der Visualisierung erstellen, indem du Konzepte, die du jetzt gelernt hast, kombinierst. <br/>
-Schaut je nach Bedarf die untenstehenden Videos zur Repetition. <br/>
+Investiert ca. 4 Stunden in folgende Arbeiten.
+Coding: Repetition aller Konzepte, schaut je nach Bedarf die untenstehenden Videos zur Repetition. <br/>
+Konzept, Entwurf: studiert eure Browser History oder einen anderen JSON Datensatz, mit dem du arbeiten willst. Was ist gespeichert und inwiefern eignet es sich, visualisiert zu werden? Mach Skizzen oder ein Moodboard, um deine Idee zu prüfen, zu vermitteln. Am kommenden Samstag werde ich individuell (oder zu zweit, falls ihr in Gruppen arbeitet) eure Idee besprechen. 
+
 *** 
 Videos zur Repetition
 * <a href="https://www.youtube.com/watch?v=_NFkzw6oFtQ">JSON</a> 
