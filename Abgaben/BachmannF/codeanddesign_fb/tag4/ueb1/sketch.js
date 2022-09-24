@@ -1,27 +1,41 @@
 let history = new Array(); //hier schreiben wir die history rein
-function preload() {
-    let url = "BrowserHistory.json";
-    loadJSON(url, loaded);
+let n = 0;
 
+function preload() {
+  let url = "BrowserHistory.json";
+  loadJSON(url, loaded);
 }
 
 function loaded(data) {
-    history = data.BrowserHistory;
+  history = data.BrowserHistory;
 
 }
 
+function setup() {
+  createCanvas(window.innerWidth, window.innerHeight);
+  frameRate(4);
+}
+
 function draw() {
+background(255, 10);
 
+let eintrag = history[n].title
+let position = eintrag.indexOf("Google")
 
-  if (history[n].page_transition == "TYPED") {
-      textSize(32);
-      fill(0, 0, 255)
-  } else {
-      textSize(12);
-      fill(0);
-  }
-  // text(history[n].title, 0, (n * 32) % height);
-  text(history[n].title, mouseX, mouseY);
+console.log(position)
+if (position > -1) {
+  fill("blue")
+}
+else {
+  fill(200, 20, 20)
+}
+  text(history[n].title, n + 50, n + 10 * 10);
+  textSize(100);
+
   n++;
+
+
+
+
 
 }
