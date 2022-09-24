@@ -52,7 +52,6 @@ function setup() {
   farb = random(250);
   farb1 = random(255);
   farb2 = random(255);
-  
   background(farb, farb1, farb2)
   noLoop();
 
@@ -67,17 +66,24 @@ function draw() {
 
 
   for (let index = 0; index < daten.length; index++) {
+    let x = map(mouseX, length, width, 0, 255)
+    let y = map(mouseY, length, width, 0, 255)
+    let randomRed = Math.floor(Math.random() * 255),
+    randomGreen = Math.floor(Math.random() * 255),
+    randomBlue = Math.floor(Math.random() * 255);
+    background(x, 0, y)
+
 
     let randomX = Math.floor(Math.random() * windowWidth),
       randomY = Math.floor(Math.random() * windowHeight);
 
     let domain = daten[index] // verkürzen das Daten aus dem Objekt geholt werden
-    let fontsize = (2500 * (domain.prozent / 80))
+    let fontsize = (1000 * (domain.prozent / 20))
     textSize(fontsize)
     y += fontsize
     textFont(fontRegular);
-    text(domain.url, randomX, randomY)
-    fill(farb,farb1,farb2)
+    text(domain.url, mouseX, randomY)
+    fill(randomRed, randomGreen, randomBlue);
   }
 
 }
