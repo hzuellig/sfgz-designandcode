@@ -1,94 +1,105 @@
-let daten = null
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+let datenByWeekday = {};
+let entries = [...Array(days.length).keys()].forEach(weekday => datenByWeekday[weekday] = []);// 0 => [], 1 => [], etc. bis 6 => []
 
 function preload() {
-  fontRegular = loadFont('../../libraries/Firm-Regular.ttf');
+    fontRegular = loadFont('../../libraries/Firm-Regular.ttf');
 
-  let url = 'BrowserHistory.json'; //achtung, eventuell pfad anpassen!
-  loadJSON(url, loaded); //die funktion loaded wird aufgerufen, wenn das file fertig geladen ist (callback funktion)
+    let url = 'BrowserHistory.json'; // achtung, eventuell pfad anpassen!
+    loadJSON(url, loaded); // die funktion loaded wird aufgerufen, wenn das file fertig geladen ist (callback funktion)
 }
 
+const regex = /^http(s{0,}:\/\/)|www.|\/.*$/g;
+
 function loaded(data) {
-  const finaleDaten = [];
-  const historyUrls = data['BrowserHistory']; // Json das geladen ist umbennen zu historyUrls, verschachtelung umgehen
-  const blackList = [
-    //'google.com',
-  ];
+    const blackList = [
+        'google.com'
+    ];
 
+    data['BrowserHistory']
+        .filter(url => !blackList.includes(url)) // alle in blacklist herausfiltern
+        .forEach((entry) => {
+            const domain = entry.url.replace(regex, ''); // das www. http. etc. verschwindet
+            const weekdayOfEntry = new Date(entry['time_usec'] / 1000).getDay();
+            const foundDomain = datenByWeekday[weekdayOfEntry].find((obj) => obj.url === domain); // ob die URL schon drin ist
+            if (foundDomain == undefined) {
+                datenByWeekday[weekdayOfEntry].push({ url: domain, anzahl: 1 }); // wenn noch nicht in Finale daten einfügen
+            } else {
+                foundDomain.anzahl += 1; // wenn doch Anzahl +1
+            }
+        });
 
-  historyUrls.forEach((entry) => {
-    const domain = entry.url.replace(/^http(s{0,}:\/\/)|www.|\/.*$/g, ''); // das www. http. etc. verschwindet
-    if (!blackList.includes(domain)) {
-      const foundDomain = finaleDaten.find((obj) => obj.url === domain); // ob die URL schon drin ist
-      if (!foundDomain) {
-        finaleDaten.push({ url: domain, anzahl: 1 }); // wenn noch nicht in Finale daten einfügen
-      } else {
-        foundDomain.anzahl += 1; // wenn doch Anzahl +1
-      }
-    }
-  });
+    let totalAufrufe = 0;
+    Object.values(datenByWeekday)
+        .forEach(domains =>
+            domains.forEach((domain) => {
+                totalAufrufe += domain.anzahl;
+            })
+        ); // Alle aufrufe jemals geschehen zusammenzählen
 
-  let totalAufrufe = 0;
-  finaleDaten.forEach((domain) => {
-    totalAufrufe += domain.anzahl;
-  }); // Alle aufrufe jemals geschehen zusammenzählen
+    Object.values(datenByWeekday)
+        .forEach(domains =>
+            domains.forEach((domain) => {
+                domain.prozent = (domain.anzahl / totalAufrufe) * 100; // Anzahl in % umrechnen
+            })
+        );
 
-  finaleDaten.forEach((domain) => {
-    domain.prozent = (domain.anzahl / totalAufrufe) * 100;
-  }); // Anzahl in % umrechnen
-
-  finaleDaten.sort((a, b) => a.anzahl - b.anzahl).reverse(); // sortieren meiste aufrufe oben tiefste unten
-  daten = finaleDaten; // Daten aus loaded auch sonst verfügbar
-
-
+    Object.values(datenByWeekday)
+        .forEach(domains =>
+            domains.sort((a, b) => b.anzahl - a.anzahl) // sortieren meiste aufrufe oben tiefste unten); // Anzahl in % umrechnen
+        );
+        console.log(datenByWeekday)
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
-  // randomSeed(8) -- Erklärt sie uns noch
-  //noLoop();
+    createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
+    // randomSeed(8) -- Erklärt sie uns noch
+    //noLoop();
 
-  farb = random(250);
-  farb1 = random(255);
-  farb2 = random(255);
+    farb1 = random(255);
+    farb2 = random(255);
+    farb3 = random(255);
 
-  background(farb, farb1, farb2)
-  frameRate(1);
+    background(farb1, farb2, farb3)
+    frameRate(1);
 
+    textFont(fontRegular);
+    textSize(450);
+    fill(0, 0, 0);
+    textLeading(500 * 1);
+    text(('google\n' + days[currentWeekDay]).toUpperCase(), 100, windowHeight * 0.35);
 }
 
-let x = 80
-let y = 0
-// das abstände stimmen
-
+let currentWeekDay = 1;
 
 function draw() {
-  let c = map(mouseX, 0, width, 0, 250);
-  let c2 = map(mouseX, 0, width, 255, 0);
-  let c3 = map(mouseY, 0, width, 100, 0);
-  let c4 = map(mouseY, 0, width, 0, 360)
-  fill(farb1, farb2, farb2,1)
-  textSize(100)
-
-
-  for (let index = 0; index < daten.length; index++) {
-    let randomX = Math.floor(Math.random() * window.innerWidth);
-    let randomY = Math.floor(Math.random() * window.innerHeight);
-    let domain = daten[index] // verkürzen das Daten aus dem Objekt geholt werden
-    let fontsize = (2500 * (domain.prozent / 50))
-    textSize(fontsize)
-    y += fontsize
-    textFont(fontRegular);
-    text(domain.url, randomX, randomY)
-    fill(farb1, farb2, farb2, 50)
-  }
-
+    const daten = datenByWeekday[currentWeekDay];
+    for (let index = 0; index < daten.length; index++) {
+      let randomX = Math.floor(Math.random() * windowWidth);
+      let randomY = Math.floor(Math.random() * windowHeight);
+      let domain = daten[index];
+      let fontsize = Math.sqrt(domain.prozent) * 50;
+      console.log(fontsize);
+      textSize(fontsize);
+      fill(farb1, farb2, farb3, 50);
+      text(domain.url, randomX, randomY);
+    }
 }
 
-
 function keyReleased() {
-  if (key == 's' || key == 'S') {
-    let d = new Date();
-    let now = d.getFullYear() + "" + (d.getMonth() + 1) + "" + d.getDate() + "" + (d.getHours() + 1) + "-" + (d.getMinutes() + 1) + "" + (d.getSeconds() + 1) + "-" + frameCount;
-    saveCanvas(now, 'png');
-  }
+    if (key == 's' || key == 'S') {
+        let now = new Date().toISOString();
+        saveCanvas(now, 'png');
+    }
+}
+
+function mouseReleased() {
+    currentWeekDay = (currentWeekDay + 1) % 7; // modulo: Rest nach Teilen
+    // 0 % 7 == 0
+    // 7 % 7 == 0 
+    background(farb1, farb2, farb3);
+    textSize(450);
+    fill(0, 0, 0);
+    textLeading(500 * 1);
+    text(('google\n' + days[currentWeekDay]).toUpperCase(), 100, windowHeight * 0.35);
 }
