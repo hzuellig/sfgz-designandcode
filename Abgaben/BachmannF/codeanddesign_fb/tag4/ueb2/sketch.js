@@ -1,11 +1,11 @@
 let daten = null
-let n = 0;
 let farb;
-  let farb1;
-  let farb2;
+let farb1;
+let farb2;
+
 
 function preload() {
-  fontRegular = loadFont('../../libraries/PressStart2P-Regular.ttf');
+  fontRegular = loadFont('../../libraries/Firm-Regular.ttf');
 
   let url = 'BrowserHistory.json'; //achtung, eventuell pfad anpassen!
   loadJSON(url, loaded); //die funktion loaded wird aufgerufen, wenn das file fertig geladen ist (callback funktion)
@@ -15,7 +15,7 @@ function loaded(data) {
   const finaleDaten = [];
   const historyUrls = data['BrowserHistory']; // Json das geladen ist umbennen zu historyUrls, verschachtelung umgehen
   const blackList = [
-    'google.com',
+    /*  'google.com',*/
   ];
 
 
@@ -49,45 +49,37 @@ function loaded(data) {
 function setup() {
   createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
   // randomSeed(8) -- Erklärt sie uns noch
-  farb=random(255);
-  farb1=random(255);
-  farb2=random(255);
-  background(farb,farb1,farb2)
+  farb = random(250);
+  farb1 = random(255);
+  farb2 = random(255);
+  background(farb, farb1, farb2)
   noLoop();
 
 }
 
 let x = 80
-let y = 20
+let y = 0
 // das abstände stimmen
 
 
 function draw() {
 
 
-  for (let index = 0; index < daten.length; index++) { // 
+  for (let index = 0; index < daten.length; index++) {
+
+    let randomX = Math.floor(Math.random() * windowWidth),
+      randomY = Math.floor(Math.random() * windowHeight);
+
     let domain = daten[index] // verkürzen das Daten aus dem Objekt geholt werden
-    let fontsize = (1000 * (domain.prozent / 80))
+    let fontsize = (2500 * (domain.prozent / 80))
     textSize(fontsize)
     y += fontsize
     textFont(fontRegular);
-    text(domain.url, x, y)
-
-
-    /*let eintrag = daten[n].url
-    let position = eintrag.indexOf("a")
-
-    if (position > -1) {
-      fill("blue")
-    } else {
-      fill(200, 2, 20)
-    }*/
-
+    text(domain.url, randomX, randomY)
+    fill(farb,farb1,farb2)
   }
 
 }
-
-
 
 function keyReleased() {
   if (key == 's' || key == 'S') {
