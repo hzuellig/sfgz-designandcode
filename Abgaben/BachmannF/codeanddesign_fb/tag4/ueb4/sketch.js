@@ -1,18 +1,17 @@
 let daten = null
-let n = 0
 
 function preload() {
-  fontRegular = loadFont('Firm-Black.otf'); // Font hineinladen
+  fontRegular = loadFont('../../libraries/Krisha-Regular.otf');
+
   let url = 'BrowserHistory.json'; //achtung, eventuell pfad anpassen!
   loadJSON(url, loaded); //die funktion loaded wird aufgerufen, wenn das file fertig geladen ist (callback funktion)
 }
 
 function loaded(data) {
   const finaleDaten = [];
-  const historyUrls = data['Browser History']; // Json das geladen ist umbennen zu historyUrls, verschachtelung umgehen
+  const historyUrls = data['BrowserHistory']; // Json das geladen ist umbennen zu historyUrls, verschachtelung umgehen
   const blackList = [
-    'u.link.ch',
-    //'google.com',
+    'google.com',
   ];
 
 
@@ -48,45 +47,44 @@ function loaded(data) {
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  //noLoop();
-  farb=random(255);
-  farb1=random(255);
-  farb2=random(255);
-  background(farb,farb1,farb2);
-  frameRate(4);
+  // noLoop();
+  farb = random(250);
+  farb1 = random(255);
+  farb2 = random(255);
+  background(farb, farb1, farb2);
+  frameRate(50);
 }
-let x = 0
+let x = 2
 let y = 0
 // das abstände stimmen
 
 
 function draw() {
+  let c = map(mouseX, 0, width, 0, 250);
+  let c2 = map(mouseX, 0, width, 255, 0);
+  let c3 = map(mouseY, 0, width, 100, 0);
+  let c4 = map(mouseY, 0, width, 0, 360)
+  fill(c*5, c2, c3)
+
+  push();
+  let angle1 = radians(c4);
+  translate(500, 500);
+  rotate(angle1*3);
 
 
-  for (let index = 0; index < daten.length; index++) { 
+
+
+  for (let index = 0; index < daten.length; index++) {
     let randomX = Math.floor(Math.random() * window.innerWidth);
     let randomY = Math.floor(Math.random() * window.innerHeight);
     let domain = daten[index] // verkürzen das Daten aus dem Objekt geholt werden
-    let fontsize = (1500 * (domain.prozent / 80))
-    let c = map(mouseX, 0, width, 0, 255);
-    let c2 = map(mouseX, 0, width, 255, 0);
-    let c3 = map(mouseY, 0, width, 255, 0);
-    textSize(fontsize)
+    let fontsize = (500 * (domain.prozent / 80))
+
+    textSize(fontsize / 2)
     y += fontsize
     textFont(fontRegular);
     text(domain.url, randomX, randomY);
-    fill(c,c2,c3);
-  
-
-
-    /*let eintrag = daten[n].url
-    let position = eintrag.indexOf("a")
-
-    if (position > -1) {
-      fill("blue")
-    } else {
-      fill(200, 2, 20)
-    }*/
+    fill(c2, c, c3);
 
   }
 
