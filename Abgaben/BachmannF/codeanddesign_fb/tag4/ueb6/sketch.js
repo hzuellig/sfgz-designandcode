@@ -1,8 +1,4 @@
 let daten = null
-let farb;
-let farb1;
-let farb2;
-
 
 function preload() {
   fontRegular = loadFont('../../libraries/Firm-Regular.ttf');
@@ -49,12 +45,14 @@ function loaded(data) {
 function setup() {
   createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
   // randomSeed(8) -- Erklärt sie uns noch
+  //noLoop();
+
   farb = random(250);
   farb1 = random(255);
   farb2 = random(255);
-  
+
   background(farb, farb1, farb2)
-  noLoop();
+  frameRate(1);
 
 }
 
@@ -64,23 +62,26 @@ let y = 0
 
 
 function draw() {
-
+  let c2 = map(mouseX, 0, width, 255, 0);
+  let c3 = map(mouseY, 0, width, 100, 0);
+  let randomA = Math.floor(Math.random() * 10),
+    randomB = Math.floor(Math.random() * 100);
+  text(randomA, randomB)
 
   for (let index = 0; index < daten.length; index++) {
-
     let randomX = Math.floor(Math.random() * windowWidth),
       randomY = Math.floor(Math.random() * windowHeight);
-
     let domain = daten[index] // verkürzen das Daten aus dem Objekt geholt werden
-    let fontsize = (2500 * (domain.prozent / 80))
+    let fontsize = (2500 * (domain.prozent / 50))
     textSize(fontsize)
     y += fontsize
     textFont(fontRegular);
     text(domain.url, randomX, randomY)
-    fill(farb,farb1,farb2)
+    fill(farb, farb1, farb2, 20)
   }
 
 }
+
 
 function keyReleased() {
   if (key == 's' || key == 'S') {
