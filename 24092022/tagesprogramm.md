@@ -1,7 +1,8 @@
 # Programm 24.9.2022
 
-* Always Iterate, Zach Liebermann https://www.youtube.com/watch?v=bmztlO9_Wvo
+* Repetition
 * Browserhistory einlesen
+* Always Iterate, Zach Liebermann https://www.youtube.com/watch?v=bmztlO9_Wvo
 * Folien von Tag1 <a href="https://docs.google.com/presentation/d/1CvH7lUmU2S5X55H3V1a02b8hXcXI4cbmQ1nF_xQf3p8/edit#slide=id.p1">LINK</a>
 * Generative Gestaltung, Typobeispiele oder Agenten! <a href="http://www.generative-gestaltung.de/2/">LINK</a>
 * 2 neue Ideen für Präsentation 
