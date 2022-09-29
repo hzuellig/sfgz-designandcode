@@ -3,7 +3,7 @@ let datenByWeekday = {};
 let entries = [...Array(days.length).keys()].forEach(weekday => datenByWeekday[weekday] = []);// 0 => [], 1 => [], etc. bis 6 => []
 
 function preload() {
-    fontRegular = loadFont('../../libraries/Firm-Regular.ttf');
+    fontRegular = loadFont('../../libraries/Krisha-Regular.otf');
 
     let url = 'BrowserHistory.json'; // achtung, eventuell pfad anpassen!
     loadJSON(url, loaded); // die funktion loaded wird aufgerufen, wenn das file fertig geladen ist (callback funktion)
@@ -64,10 +64,10 @@ function setup() {
     frameRate(1);
 
     textFont(fontRegular);
-    textSize(450);
+    textSize(650);
     fill(0, 0, 0);
-    textLeading(500 * 1);
-    text(('google\n' + days[currentWeekDay]).toUpperCase(), 100, windowHeight * 0.35);
+    textLeading(420);
+    text(('google\n' + days[currentWeekDay]).toUpperCase(), 50, windowHeight * .5);
 }
 
 let currentWeekDay = 1;
@@ -81,7 +81,7 @@ function draw() {
       let fontsize = Math.sqrt(domain.prozent) * 50;
       console.log(fontsize);
       textSize(fontsize);
-      fill(farb1, farb2, farb3, 50);
+      fill(farb1, farb2, farb3, 70);
       text(domain.url, randomX, randomY);
     }
 }
