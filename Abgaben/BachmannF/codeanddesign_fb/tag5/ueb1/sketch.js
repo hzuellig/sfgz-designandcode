@@ -54,10 +54,10 @@ function loaded(data) {
 }
 
 function drawGoogle() {
-    background(farb1, farb2, farb3)
+    background(farbH1, farbS, farbB)
     textFont(fontRegular);
     textSize(620);
-    fill(farb2, farb1, farb3);
+    fill(farbH2, farbS, farbB);
     textLeading(420);
     textAlign(CENTER, BASELINE);
     text(('google\n' + days[currentWeekDay]).toUpperCase(), windowWidth / 2, windowHeight / 2);
@@ -67,9 +67,10 @@ function setup() {
     createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
     colorMode(HSB);
 
-    farb1 = random(200,255);
-    farb2 = random(50,100);
-    farb3 = random(50,100);
+    farbH1 = random(0, 360);
+    farbH2 = random(0, 360);
+    farbS = random(80, 100);
+    farbB = random(80, 100);
 
     frameRate(5);
 
@@ -81,7 +82,7 @@ let currentWeekDay = 1;
 
 function draw() {
 
-    let x = map(mouseX, length, width, 0, 5)
+    let x = map(mouseX, length, width, 0, 1)
     let y = map(mouseY, length, width, 0, 1)
 
 
@@ -94,7 +95,7 @@ function draw() {
         console.log(fontsize);
         textFont(fontPixel);
         textSize(fontsize * x);
-        fill(farb1, farb2, farb3,y);
+        fill(farbH1, farbS, farbB, y);
         text(domain.url, randomX, randomY);
     }
 }
