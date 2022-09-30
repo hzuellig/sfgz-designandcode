@@ -80,8 +80,8 @@ let currentWeekDay = 1;
 
 function draw() {
 
-    let x = map(mouseX, length, width, 0, 1)
-    let y = map(mouseY, length, width, 20, 100)
+    let x = map(mouseX, length, width, 0, 5)
+    let y = map(mouseY, length, width, 20, 50)
 
 
     const daten = datenByWeekday[currentWeekDay];
