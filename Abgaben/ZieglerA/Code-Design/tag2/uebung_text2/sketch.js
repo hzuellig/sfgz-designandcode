@@ -22,6 +22,13 @@ lg_hfiad21[12] = "Alexandra";
 
 let keyN = 0;
 
+let n = 3;
+//if (n == 3) {
+//  console.log('Bedingung wahr')
+//} else {
+//   console.log('Bedingung falsch')
+//}
+
 function preload() {
     fontRegular = loadFont('../../libraries/AntiqueOliveStd-Roman.otf');
 
@@ -30,16 +37,22 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(250, 220, 200)
+
 
 
 }
 
 function draw() {
+    background(250)
     text(lg_hfiad21[keyN], mouseX, mouseY);
     textSize(32);
     textFont(fontRegular);
     fill(33, 220, 80);
+
+    if (mouseIsPressed === true) {
+        background(255);
+
+    } else {}
     // textSize(45);
 
     // text(name, mouseX, mouseY);
@@ -47,7 +60,12 @@ function draw() {
 
 function mouseClicked(event) {
     keyN = keyN + 1;
-    console.log(keyN);
+    // console.log(lg_hfiad21);
+    if (keyN > lg_hfiad21.length - 1) {
+        keyN = 0;
+
+    }
+
     // Kurzschreibweise n++
 }
 
