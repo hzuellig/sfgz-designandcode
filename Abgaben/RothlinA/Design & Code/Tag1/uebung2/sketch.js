@@ -25,3 +25,9 @@ function draw() {
   triangle(0,600,150,450,300,600);
   
 }
+function keyReleased() {
+  if (key == 's' || key == 'S') {
+      let now = new Date().toISOString();
+      saveCanvas(now, 'png');
+  }
+}

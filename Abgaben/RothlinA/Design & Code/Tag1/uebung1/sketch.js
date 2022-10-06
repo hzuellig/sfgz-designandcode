@@ -65,3 +65,10 @@ function draw() {
     triangle(430, 475, 458, 525, 486, 475);
   
 }
+
+function keyReleased() {
+  if (key == 's' || key == 'S') {
+      let now = new Date().toISOString();
+      saveCanvas(now, 'png');
+  }
+}
