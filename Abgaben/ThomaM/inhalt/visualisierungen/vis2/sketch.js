@@ -35,3 +35,10 @@ function keyReleased() {
       saveCanvas(now, 'png');
   }
 }
+/**
+ * [...]
+ 
+ * @author  Melissa Thoma
+ * @author Natascha Meili
+ * 
+ */

@@ -7,8 +7,8 @@ let shifty=50;
 let shiftx=50;
 let end=1;
 
-let maxa=100;
-let mina = 40;
+let maxa=50;
+let mina = 20;
 let grow=true;
 
 
@@ -27,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-  a=100;                                              
+  a=50;                                              
   background(20, 20, 45);                             // DOPPELT, kann entfernt werden
   translate(shiftx, shifty); 
 
@@ -40,7 +40,7 @@ function draw() {
     fill(0,100,100);
     stroke(255);
     noFill();
-    text(history[i].page_transition, x_value, i*10 );
+    text(history[i].title, x_value, i*10 );
 
     if(grow && a <maxa){
       a++;
@@ -50,7 +50,7 @@ function draw() {
     }
 
     if(!grow && a >mina){
-      a-=0.5;
+      a-=4;
     }else {
       grow = true;
     }
@@ -73,7 +73,16 @@ function draw() {
   }
   //
   end++;
-  shifty=shifty-2;
+if(end*10>height )
+{
+  shifty=shifty-10;
+
+}
+
+else {
+  shifty=shifty-5;
+
+}
 
 }
 
@@ -84,3 +93,10 @@ function keyReleased() {
     saveCanvas(now, 'png');
   }
 }
+/**
+ * [...]
+ 
+ * @author  Melissa Thoma
+ * @author Natascha Meili
+ * 
+ */

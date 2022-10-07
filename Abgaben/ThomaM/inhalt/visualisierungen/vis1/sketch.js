@@ -13,11 +13,13 @@ let grow=true;
 
 let snowflakes = []; // array to hold snowflake objects
 
+
 function preload() {
     let url = "BrowserHistory.json";
     loadJSON(url, loaded);
   
 }
+
 function loaded(data){
   history = data.BrowserHistory;
 }
@@ -30,6 +32,21 @@ function setup() {
   frameRate(120);
   background(200, 20, 45)
 }
+
+
+
+function datetoTimestamp(strDate){
+  var date = Date.parse(strDate);
+  return date/1000;
+}
+
+timestamp = datetoTimestamp('10/19/2021, 4:21:54 ')
+timestamp_to_milsec = timestamp*1000;
+console.log('millsecond:',timestamp_to_milsec);
+
+
+
+
 function draw() {
   background('lightblue');
   let t = frameCount / 60; // update time
@@ -118,3 +135,17 @@ function keyReleased() {
       saveCanvas(now, 'png');
   }
 }
+/**
+ * [...]
+ 
+ * @author  Melissa Thoma
+ * @author   Natascha Meili
+ * 
+ */
+
+/**
+* Ein Beispiel aus der P5 Galerie angepasst auf unsere Idee
+* forum here:
+* https://p5js.org/examples/simulate-snowflakes.html
+[…]
+*/
