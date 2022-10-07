@@ -20,7 +20,7 @@ lg_hfiad21[10] = "Juri";
 lg_hfiad21[11] = "Melissa";
 lg_hfiad21[12] = "Alexandra";
 
-let key = 0;
+let keyN = 0;
 
 function preload() {
     fontRegular = loadFont('../../libraries/AntiqueOliveStd-Roman.otf');
@@ -36,7 +36,7 @@ function setup() {
 }
 
 function draw() {
-    text(lg_hfiad21[key], mouseX, mouseY);
+    text(lg_hfiad21[keyN], mouseX, mouseY);
     textSize(32);
     textFont(fontRegular);
     fill(33, 220, 80);
@@ -46,7 +46,8 @@ function draw() {
 }
 
 function mouseClicked(event) {
-    key = key + 1;
+    keyN = keyN + 1;
+    console.log(keyN);
     // Kurzschreibweise n++
 }
 

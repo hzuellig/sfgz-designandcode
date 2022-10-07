@@ -33,3 +33,10 @@
 
 
   }
+
+  function keyReleased() {
+    if (key == 's' || key == 'S') {
+        let now = new Date().toISOString();
+        saveCanvas(now, 'png');
+    }
+}

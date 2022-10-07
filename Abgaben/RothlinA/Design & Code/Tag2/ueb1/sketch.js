@@ -15,6 +15,9 @@ lg_hfiad21[12] = "lexi";
 lg_hfiad21[13] = "hanna";
 let keyn = 0;
 
+let farb;
+  let farb1;
+  let farb2;
 
 function preload() {
   angi = loadFont('../font/Angelica-Regular.otf');
@@ -22,13 +25,19 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight); //mit den JavaScript Variablen könnt ihr die aktuelle Groesse des Fensters abfragen. 
-  background(0, 10)
+  // randomSeed(8) -- Erklärt sie uns noch
+  farb=random(255);
+  farb1=random(255);
+  farb2=random(255);
+  background(farb,farb1,farb2)
+
 }
 
 
 
 function draw() {
-  background(0, 10)
+ 
+
   let vorname = "lexi";
   let c = map(mouseX, 0, width, 0, 255);
   let c2 = map(mouseX, 0, width, 255, 0);
@@ -39,7 +48,7 @@ function draw() {
   let s = map(mouseX, 0, width, 300, 0);
   let s2 = map(mouseX, 0, width, 0, 300);
   textFont(angi)
-  fill(c2, c3, c4)
+  // fill(c2, c3, c4)
   text(lg_hfiad21[keyn], mouseX, mouseY); //in die Funktion draw einfügen
   if (mouseIsPressed === true) {
     textSize(40)
@@ -71,11 +80,10 @@ function keyReleased() {
 }
 
 
-/* function keyPressed(){
+ function keyPressed(){
   if (keyCode === LEFT_ARROW){
     fill(111,111,111)
   } else {
     fill(255,0,0)
   }
   }
-  */
