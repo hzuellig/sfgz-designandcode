@@ -1,7 +1,7 @@
-HFIAD21 —  Code & Design
-Flavia Bachmann
+## HFIAD21 — Code & Design — Flavia Bachmann
 
-Figma-Prozessgalerie:
+
+#Figma-Prozessgalerie:
 https://www.figma.com/proto/yWHiWstxynKWTEtX7oNyrC/Code-and-Design?page-id=8%3A19&node-id=9%3A3&viewport=-10976%2C288%2C0.25&scaling=min-zoom
 
 
