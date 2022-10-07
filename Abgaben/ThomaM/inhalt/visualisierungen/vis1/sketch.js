@@ -18,6 +18,9 @@ function preload() {
     loadJSON(url, loaded);
   
 }
+
+
+
 function loaded(data){
   history = data.BrowserHistory;
 }
@@ -30,6 +33,8 @@ function setup() {
   frameRate(120);
   background(200, 20, 45)
 }
+
+
 function draw() {
   background('lightblue');
   let t = frameCount / 60; // update time
@@ -118,3 +123,17 @@ function keyReleased() {
       saveCanvas(now, 'png');
   }
 }
+/**
+ * [...]
+ 
+ * @author  Melissa Thoma
+ * @author   Natascha Meili
+ * 
+ */
+
+/**
+* Ein Beispiel aus der P5 Galerie angepasst auf unsere Idee
+* forum here:
+* https://p5js.org/examples/simulate-snowflakes.html
+[…]
+*/

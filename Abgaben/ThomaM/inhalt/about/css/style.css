@@ -8,7 +8,9 @@ h1 {
   font-size: 4em;
   width: 100%;
   margin-top: 50px;
+  margin-left: 0px;
   margin-bottom: -60px;
+  text-align: center;
 }
 
 .navbar{
@@ -20,10 +22,13 @@ h1 {
 
 p {
   font-size: 1.2em;
-  width: 40%;
+  width: 100%;
   margin-top: 0px;
-  margin-left: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
   line-height: 140%;
+  text-align: center;
+
 }
 
 .navbar ul{
@@ -73,34 +78,30 @@ p {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.5em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 50px;
 }
 
-.flex-container a:hover{
-  color: rgb(190, 182, 168);
-}
-
 .flex-item-left {
-  background-color: #000000;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 20px;
-  flex: 30%;
+  flex: 50%;
   border-radius: 50px;
-  font-size: 2.5em;
+  font-size: 2em;
   text-decoration: none;
-  margin: 10px;
+  margin-left: 50px;
 }
 
 .flex-item-right {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 20px;
-  flex: 30%;
+  flex: 50%;
   border-radius: 50px;
-  font-size: 2.5em;
+  font-size: 2em;
   text-decoration: none;
   margin: 10px;
+  margin-left: 50px;
+
 }
 
 .header {
