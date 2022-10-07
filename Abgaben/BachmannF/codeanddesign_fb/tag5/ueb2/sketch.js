@@ -1,4 +1,4 @@
-var days = ['Sunday', 'Monday', 'Thank', 'You', 'Goodbye', 'Friday', 'Saturday'];
+var days = ['Goodbye', 'Goodbye', 'Thank', 'You', 'Goodbye', 'Goodbye', 'Goodbye'];
 let datenByWeekday = {};
 let entries = [...Array(days.length).keys()].forEach(weekday => datenByWeekday[weekday] = []);// 0 => [], 1 => [], etc. bis 6 => []
 

@@ -1,5 +1,3 @@
-# Individuelle Repos
-
 HFIAD21 —  Code & Design
 Flavia Bachmann
 
