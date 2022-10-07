@@ -1,5 +1,4 @@
-## HFIAD21 —  Code & Design
-## Flavia Bachmann
+## HFIAD21 — Code & Design – Flavia Bachmann
 
 
 #Figma-Prozessgalerie:
