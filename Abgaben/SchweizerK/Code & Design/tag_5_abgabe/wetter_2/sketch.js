@@ -15,6 +15,8 @@ function setup() {
     button.mousePressed(weatherAsk);
     input = select('#city');
 
+
+
 }
 
 function weatherAsk() {
@@ -26,7 +28,7 @@ function weatherAsk() {
 
 function gotData(data) {
     weather = data;
-
+    console.log(weather.weather[0].description);
 }
 
 
@@ -34,7 +36,17 @@ function draw() {
 
     if (weather) {
 
-        background(120, 130, 130, 1);
+        //let tempA = map(weather.main.temp, 0, 24, 240, 320);
+        //colorMode(HSB);
+        //background(tempA, 100, 50, 0.1);
+
+        //colorMode(HSB);
+        //fill(color(tempA, 100, 20, 0.1));
+
+        frameRate(weather.wind.speed * 10);
+
+        let tempA = map(weather.main.temp, 0, 24, 0, 255);
+        background(120, 130, tempA, 1);
 
         fill(color(50, 30, 200, 1));
         beginShape();
@@ -43,27 +55,34 @@ function draw() {
 
         for (var x = 0; x <= width; x += 5) {
 
-            var y = map(noise(xoff, yoff), 0, 1, 100, 300);
-            //var y = map(noise(xoff), 0, 1, 200,300);
+            var y = (noise(xoff, yoff) * weather.wind.speed * 100);
 
             vertex(x, y);
-            xoff += 0.02;
+            xoff += weather.wind.speed / 500;
         }
-        yoff += 0.0085;
+
+
+        //yoff += weather.main.humidity / 10000;
+        yoff += weather.wind.speed / 1500;
+        //yoff += 0.01;
         vertex(width, height);
         vertex(0, height);
         endShape(CLOSE);
 
         ////////////
 
-        textSize(15);
-        //fill(0, 18);
-        text("Stadt: " + weather.name, 10, 50);
-        text("Temperatur: " + weather.main.temp + '°', 10, 70);
-        //text("Wetter: " + weather[0].description, 10, 90);
-        text("Feuchtigkeit: " + weather.main.humidity, 10, 110);
-        text("Wind: " + weather.wind.speed, 10, 130);
-        text("Wolken: " + weather.clouds.all, 10, 150);
+        textSize(35);
+        fill(255, 255, 255);
+        //fill(200, 0, tempA * 20);
+        text(weather.name, 10, 650);
+
+        textSize(18);
+
+        text("Temperatur: " + weather.main.temp + '°', 300, 650);
+        text("Wetter: " + weather.weather[0].description, 300, 670);
+        text("Feuchtigkeit: " + weather.main.humidity, 600, 650);
+        text("Wind: " + weather.wind.speed, 600, 670);
+        text("Wolken: " + weather.clouds.all, 600, 690);
 
 
     }
@@ -73,10 +92,17 @@ function draw() {
 function keyReleased() {
 
     // ScreenShot
-    //if (key == 's' || key == 'S') {
-    //let d = new Date();
-    //let now = d.getFullYear() + "" + (d.getMonth() + 1) + "" + d.getDate() + "" + (d.getHours() + 1) + "-" + (d.getMinutes() + 1) + "" + (d.getSeconds() + 1) + "-" + frameCount + ".png";
-    //saveCanvas(now, 'png');
-    //}
+    if (key == '1' || key == '+') {
+        let d = new Date();
+        let now = d.getFullYear() + "" + (d.getMonth() + 1) + "" + d.getDate() + "" + (d.getHours() + 1) + "-" + (d.getMinutes() + 1) + "" + (d.getSeconds() + 1) + "-" + frameCount + ".png";
+        saveCanvas(now, 'png');
+    }
+
+
+    // Reset Background
+    if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
+
+
+
 
 }
