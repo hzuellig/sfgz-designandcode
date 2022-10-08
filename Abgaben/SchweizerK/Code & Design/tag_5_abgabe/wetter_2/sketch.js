@@ -36,13 +36,6 @@ function draw() {
 
     if (weather) {
 
-        //let tempA = map(weather.main.temp, 0, 24, 240, 320);
-        //colorMode(HSB);
-        //background(tempA, 100, 50, 0.1);
-
-        //colorMode(HSB);
-        //fill(color(tempA, 100, 20, 0.1));
-
         frameRate(weather.wind.speed * 10);
 
         let tempA = map(weather.main.temp, 0, 24, 0, 255);
@@ -73,7 +66,6 @@ function draw() {
 
         textSize(35);
         fill(255, 255, 255);
-        //fill(200, 0, tempA * 20);
         text(weather.name, 10, 650);
 
         textSize(18);
