@@ -1,4 +1,4 @@
-# Figma-Prozessgalerie: 
+# Konzept: 
 
 In dieser Galerie sind alle P5.js learnings visuel hinterlegt, welche ich im Fach Design und Code bei Hanna Züllig angeignet habe.
 
