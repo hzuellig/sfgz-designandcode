@@ -43,9 +43,9 @@ function draw() {
   console.log(esize);
   n++;
 
-  for(let n=0; n < earthquake.length; n++){
+/*   for(let n=0; n < earthquake.length; n++){
     text(earthquake[n], n, n*50+40)
-  }
+  } */
 }
 
 function keyReleased() {
