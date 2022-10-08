@@ -1,0 +1,9 @@
+{
+    "abc": 50,
+    "noiseScale": 300,
+    "noiseStrength": 10,
+    "overlayAlpha": 10,
+    "agentAlpha": 90,
+    "strokeWidth": 0.3,
+    "drawMode": 1
+}
