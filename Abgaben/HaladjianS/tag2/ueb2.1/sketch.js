@@ -1,11 +1,12 @@
 let Sukram;
+
 function preload() {
-  Sukram = loadFont("../../libary/Sukram-Regular.otf");
+    Sukram = loadFont("../../library/Sukram-Regular.otf");
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  textFont(Sukram);
+    createCanvas(windowWidth, windowHeight);
+    textFont(Sukram);
 }
 
 let lg_hfiad21 = new Array();
@@ -29,50 +30,49 @@ let key2 = 0;
 
 
 function draw() {
-  background(0, 10);
+    background(0, 10);
 
-  text(lg_hfiad21[key2], mouseX, mouseY);
+    text(lg_hfiad21[key2], mouseX, mouseY);
 
-  let c = map(mouseX, 0, width, 0, 255);
+    let c = map(mouseX, 0, width, 0, 255);
 
-  fill(255, c, c);
-  textSize(c);
-  /* text(vorname, mouseX, mouseY); */
+    fill(255, c, c);
+    textSize(c);
+    /* text(vorname, mouseX, mouseY); */
 
-  let xStart = 0; //zu oberst einfügen
+    let xStart = 0; //zu oberst einfügen
 
-  if (mouseIsPressed === true) {
-    background(255);
+    if (mouseIsPressed === true) {
+        background(255);
 
-  } else {
-  }
+    } else {}
 }
 
 function mouseClicked(event) {
-  key2 = key2 + 1;
+    key2 = key2 + 1;
 
-  if (key2 > lg_hfiad21.length - 1) {
-    key2 = 0;
-  }
+    if (key2 > lg_hfiad21.length - 1) {
+        key2 = 0;
+    }
 }
 
 function keyReleased() {
-  if (key == "s" || key == "S") {
-    let d = new Date();
-    let now =
-      d.getFullYear() +
-      "" +
-      (d.getMonth() + 1) +
-      "" +
-      d.getDate() +
-      "" +
-      (d.getHours() + 1) +
-      "-" +
-      (d.getMinutes() + 1) +
-      "" +
-      (d.getSeconds() + 1) +
-      "-" +
-      frameCount;
-    saveCanvas(now, "png");
-  }
+    if (key == "s" || key == "S") {
+        let d = new Date();
+        let now =
+            d.getFullYear() +
+            "" +
+            (d.getMonth() + 1) +
+            "" +
+            d.getDate() +
+            "" +
+            (d.getHours() + 1) +
+            "-" +
+            (d.getMinutes() + 1) +
+            "" +
+            (d.getSeconds() + 1) +
+            "-" +
+            frameCount;
+        saveCanvas(now, "png");
+    }
 }
