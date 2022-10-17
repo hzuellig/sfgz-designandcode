@@ -1,7 +1,7 @@
 # Modul Code&Design, SFGZ 2022
 Eine Einführung in Creative Coding <br/>
 Projekt: Einlesen von Daten über API und visuelle Darstellung von Datenspuren <br/>
-Verwendete Daten: Browsing History, Wetter, Google Location History, Erdbeben
+Verwendete Daten: Browsing History, Wetter, Google Location History, Erdbeben<br/>
 Teacher: Hanna Züllig
 
 # Final Projects
