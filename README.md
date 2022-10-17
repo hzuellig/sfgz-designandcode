@@ -1,6 +1,7 @@
-# Modul Code&Design, SFGZ 2022, Teacher Hanna Züllig
+# Modul Code&Design, SFGZ 2022
 Eine Einführung in Creative Coding <br/>
 Projekt: Einlesen von Daten über API und visuelle Darstellung der Datenspuren <br/>
+Teacher: Hanna Züllig
 
 # Final Projects
 
