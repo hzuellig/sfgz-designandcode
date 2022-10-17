@@ -1,6 +1,7 @@
 # Modul Code&Design, SFGZ 2022
 Eine Einführung in Creative Coding <br/>
-Projekt: Einlesen von Daten über API und visuelle Darstellung der Datenspuren <br/>
+Projekt: Einlesen von Daten über API und visuelle Darstellung von Datenspuren <br/>
+Verwendete Daten: Browsing History, Wetter, Google Location History, Erdbeben
 Teacher: Hanna Züllig
 
 # Final Projects
@@ -21,13 +22,13 @@ Sario Haladjian:<br/>
 Prozessgalerie: https://www.figma.com/proto/APY13zaQQUlylFQ1TwGzvS/Datenvisualisierung-Code%26Design?page-id=1%3A4&node-id=37%3A2&viewport=-365%2C-1600%2C0.57&scaling=contain&starting-point-node-id=37%3A2<br/>
 Final: HaladjianS/projekt/earthquake3/index.html <br/>
 
-Cédric Juan:<br/>
-Prozessgalerie:<br/>
-Final: <br/>
+Cédric Juan: <br/>
+Prozessgalerie: https://sfgzdesingcode.netlify.app/Abgaben/JuanC/prozessgalerie/index.html<br/>
+Final: https://sfgzdesingcode.netlify.app/Abgaben/JuanC/tag6-final/sketch3/index.html<br/>
 
 Natascha A. Meili & Melissa Ziegler:<br/>
 Prozessgalerie: https://sfgzdesingcode.netlify.app/Abgaben/ThomaM/index.html<br/>
-Final: https://sfgzdesingcode.netlify.app/ <br/>
+Final: https://sfgzdesingcode.netlify.app/abgaben/thomam/inhalt/visualisierungen/vis3/ <br/>
 
 Noah Ortner:<br/>
 Prozessgalerie: https://www.figma.com/proto/145jFviKqweCl4yYDRY2Bo/code-and-design?page-id=0%3A1&node-id=12%3A45&starting-point-node-id=12%3A45<br/>
@@ -47,8 +48,8 @@ Final: https://sfgzdesingcode.netlify.app/Abgaben/SchweizerK/Code%20&%20Design/t
 
 Juri Seger:<br/>
 Prozessgalerie: https://www.figma.com/proto/BrDJV98npYhkHx5cOXxrg5/Code%26Design-Prozessgalerie?node-id=62%3A45&scaling=min-zoom&page-id=62%3A44&starting-point-node-id=87%3A44<br/>
-Final: <br/>
+Final: https://sfgzdesingcode.netlify.app/Abgaben/SegerJ/Tag%206/ueb2.6/index.html<br/>
 
 Alexandra Ziegler:<br/>
-Prozessgalerie:<br/>
-Final: <br/>
+Prozessgalerie: https://www.figma.com/proto/APY13zaQQUlylFQ1TwGzvS/Datenvisualisierung-Code%26Design?page-id=0%3A1&node-id=19%3A27&viewport=-304%2C230%2C0.15&scaling=min-zoom&starting-point-node-id=19%3A27<br/>
+Final: https://sfgzdesingcode.netlify.app/Abgaben/ZieglerA/Code-Design/Code-Design/projekt/joydivison/index.html<br/>
